@@ -1,0 +1,24 @@
+.image-custom {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.title-custom {
+  text-align: center;
+}
+
+.content-custom {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+@media screen and (max-width: 767px) {
+  .article-custom {
+    padding: 20px 0 0;
+  }
+  .image-custom {
+    width: 100%;
+  }
+}

@@ -1,0 +1,45 @@
+<hr>
+<h2 class="header-custom">Galeria</h2>
+<hr>
+<h4>28.05.2017: AZS-AGH - UJ Kraków</h4>
+<app-loading-spinner *ngIf="showSpinner"></app-loading-spinner>
+<div class="row">
+  <ul id="thumnailsList">
+    <li *ngFor="let photo of photos$ | async" class="img">
+      <span *ngIf="photo.date === '28.05.2017'">
+        <img src="{{photo.imgURL}}" alt="{{photo.title}}" class="tn" (click)="openLg(content)">
+      </span>
+      <ng-template #content let-ca="close('a')">
+        <div class="modal-header modalbox">
+          <button type="button" class="close" aria-label="Close" (click)="ca">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body modalbox">
+          <img class="img-responsive" src="{{photo.imgURL}}" alt="{{photo.title}}" />
+        </div>
+      </ng-template>
+    </li>
+  </ul>
+</div>
+
+<h4>17.04.2017: AZS-AGH - Politechnika Krakowska</h4>
+<div class="row">
+  <ul id="thumnailsList">
+    <li *ngFor="let photo of photos$ | async" class="img">
+      <span *ngIf="photo.date === '17.04.2017'">
+        <img src="{{photo.imgURL}}" alt="{{photo.title}}" class="tn" (click)="openLg(content)">
+      </span>
+      <ng-template #content let-ca="close('a')">
+        <div class="modal-header modalbox">
+          <button type="button" class="close" aria-label="Close" (click)="ca">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body modalbox">
+          <img class="img-responsive" src="{{photo.imgURL}}" alt="{{photo.title}}" />
+        </div>
+      </ng-template>
+    </li>
+  </ul>
+</div>

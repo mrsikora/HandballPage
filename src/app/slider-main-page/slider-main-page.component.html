@@ -1,0 +1,14 @@
+<app-loading-spinner *ngIf="showSpinner"></app-loading-spinner>
+<ngb-carousel>
+  <div *ngFor="let article of news$ | async" class="row">
+    <div *ngIf="article.id <= 3">
+      <ng-template ngbSlide>
+        <img class="image-custom" routerLink="/news/{{article.id}}" src="{{article.imgURL}}" alt="{{article.title}}">
+        <div class="carousel-caption" routerLink="/news/{{article.id}}" routerLinkActive="active">
+          <h3>{{article.title}}</h3>
+          <p>{{article.description}}</p>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</ngb-carousel>

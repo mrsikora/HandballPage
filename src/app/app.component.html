@@ -1,0 +1,97 @@
+<div class="container-fluid container-fluid-bacground">
+  <div class="container" #scrollContainer>
+    <button class="fa fa-arrow-up" id="arrow-up" (click)="onClick()"></button>
+    <!-- logo -->
+    <div class="row logo-box ">
+      <div class="col-md-12">
+        <app-logo></app-logo>
+      </div>
+    </div>
+
+    <!-- menu -->
+    <div class="row">
+      <div class="col-md-12">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class=" navbar-default container-fluid" id="navbarSupportedContent">
+            <a class="navbar-brand">
+              <div class="row">
+
+                <img class="img-mobile" src="/assets/AZS-AGH-logo-mobile.png" alt="Logo AZS AGH Kraków" routerLink="/main-page">
+
+                <div class="mobile-container" routerLink="/home">
+                  <b>AZS AGH Kraków</b>
+                  <br>piłka ręczna
+                </div>
+              </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarDefault" aria-controls="navbarDefault"
+              aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarDefault">
+              <ul class="navbar-nav navbar-nav-custom " data-toggle="collapse" data-target=".navbar-collapse.show">
+                <li class="nav-item" routerLinkActive="active">
+                  <a class="nav-link" routerLink="/home" routerLinkActive="active">Strona główna
+                    <span class="sr-only">(current)</span>
+                  </a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    O nas
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown" routerLinkActive="active">
+                    <a class="dropdown-item" routerLink="/management">Zarząd</a>
+                    <a class="dropdown-item" routerLink="/players">Skład</a>
+                  </div>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/news" routerLinkActive="active">Aktualności</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/schedule" routerLinkActive="active">Terminarz</a>
+                </li>
+
+
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/gallery" routerLinkActive="active">Galeria</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/contact" routerLinkActive="active">Kontakt</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/form" routerLinkActive="active">Ankieta</a>
+                  </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!-- <div class="row">
+        <div class="col-md-12 mainC">
+            <ng-progress #progressBar></ng-progress>
+            <button (click)="progressBar.start()">Start</button>
+            <button (click)="progressBar.complete()">Complete</button>
+    </div>
+    </div> -->
+    <!--main content-->
+    <div class="row">
+      <div class="col-md-12 to-progressbar-custom main-content-custom">
+        <ng-progress [color]="'red'" [thick]="true" [spinner]="false"></ng-progress>
+        <router-outlet (activate)="onActivate($event, scrollContainer)"></router-outlet>
+      </div>
+    </div>
+
+    <hr>
+    <!-- footer -->
+    <div class="row">
+      <div class="col-md-12 nopadding">
+        <app-footer></app-footer>
+      </div>
+    </div>
+  </div>
+</div>

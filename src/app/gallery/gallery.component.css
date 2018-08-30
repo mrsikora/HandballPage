@@ -1,0 +1,51 @@
+ul {
+  text-align: center;
+  padding: 0;
+  margin: 20px auto;
+}
+
+li {
+  display: inline;
+}
+
+.tn {
+  margin: 6px 6px;
+  border: 4px solid #eee;
+  box-shadow: #555 1px 1px 8px 1px;
+  cursor: pointer;
+  width: 300px;
+}
+
+.modalbox {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 767px) {
+  .tn {
+    width: 40%;
+  }
+  img {
+    max-width: 300px;
+  }
+  .modal-body {
+    padding: 0.1rem;
+  }
+}
+
+@media screen and (width: 768px) {
+  img {
+    max-width: 490px;
+  }
+  .modal-body {
+    padding: 0.1rem;
+  }
+}
+
+@media screen and (min-width:769px) and (max-width: 991px) {
+  img {
+    max-width: 495px;
+  }
+  .modal-body {
+    padding: 0.1rem;
+  }
+}

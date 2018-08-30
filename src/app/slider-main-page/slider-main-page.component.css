@@ -1,0 +1,60 @@
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  /* turn off bootstrap default svg chevrons */
+  background-image: none;
+  /* override bootstraps fixed size */
+  width: auto;
+  height: auto;
+  /* add a text shadow to the chevrons and caption (inner text) to make them visible on white backgrounds */
+  /* text-shadow: 0 0 1.0rem black; */
+  background-color: rgba(0, 0, 0, 0.5);
+  filter: alpha(opacity=50);
+  /* set the size and color of the FontAwesome chevrons */
+  font-size: 1.5rem;
+}
+
+.carousel-indicators li {
+  /* add a box shadow to the indicators to make them visible on white backgrounds */
+  box-shadow: 0 3px 4rem rgba(0, 0, 0, 15);
+  background-color: black;
+  cursor: pointer;
+}
+
+.carousel-caption {
+  padding: 0 20px;
+  margin: 0 auto;
+  margin-top: 200px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  filter: alpha(opacity=50);
+  max-width: 100%;
+  width: 100%;
+  left: 0;
+}
+
+/* Title text */
+.carousel-caption h3 {
+  cursor: pointer;
+}
+
+/* Description text */
+.carousel-caption p {
+  font-size: 1.3em;
+  cursor: pointer;
+}
+
+.image-custom {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .carousel-caption h3 {
+    font-size: 1.0rem;
+  }
+  .carousel-caption p {
+    font-size: 0.8rem;
+  }
+  .image-custom {
+    max-height: 350px;
+  }
+}

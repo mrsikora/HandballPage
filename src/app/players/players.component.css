@@ -1,0 +1,55 @@
+.team {
+  padding-bottom: 20px;
+}
+
+.number {
+  float: left;
+  padding-right: 15px;
+}
+
+.custom-body {
+  overflow: hidden;
+}
+
+.custom-img {
+  padding: 5px;
+}
+
+.custom-row {
+  float: left;
+}
+
+.custom-card {
+  /* the same card heigt*/
+  min-height: 360px !important;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  .custom-card {
+    /* the same card heigt*/
+    min-height: 257px !important;
+    margin-bottom: 4px;
+  }
+  .card-body {
+    padding: 5px;
+  }
+  .col-6 {
+    padding: 3px;
+  }
+}
+
+/* iPad */
+
+@media screen and (width: 768px) {
+  .custom-card {
+    min-height: 300px !important;
+    margin-bottom: 4px;
+  }
+  .card-body {
+    padding: 5px;
+  }
+  .col-6 {
+    padding: 3px;
+  }
+}

@@ -1,0 +1,142 @@
+<!-- <div class="btn-group btn-group-custom">
+  <button type="button">
+    <span class="fa fa-camera  btn btn-block  btn-lg button-custom" title="dołącz do nas"></span>
+  </button>
+
+
+  <button type="button">
+    <span class="fa fa-users btn btn-block  btn-lg button-custom"  title="dołącz do nas"></span>
+  </button>
+
+  <button type="button">
+    <span class="fa fa-envelope btn btn-block  btn-lg button-custom" title="kontakt"></span>
+  </button>
+</div> -->
+
+<!-- <div class="btn-group btn-group-custom"> -->
+<div class="row">
+  <!-- next-match popup -->
+  <div class="col-md-4 centered">
+    <a>
+      <i class="fa  fa-futbol-o btn btn-custom btn-custom-green" title="następny mecz" (click)="openLg(contentMatch)"></i>
+      <ng-template #contentMatch let-ca="close('a')">
+          <div class="modal-header modalbox">
+            <h2 class="content-custom">Następny mecz</h2>
+            <button type="button" class="close" aria-label="Close" (click)="ca">
+              <span aria-hidden="true">&times;</span>
+            </button>
+
+          </div>
+          <div class="modal-body modalbox">
+            <div class="row">
+              <div class="column">
+                <h3 class="header-custom">Kobiety</h3>
+                <h4 class="content-custom">Poniedziałek: 18:30</h4>
+                <h5 class="content-custom">Przeciwnik: UJ Kraków</h5>
+                <h5 class="content-custom">Hala AZS AGH</h5>
+              </div>
+              <div class="column">
+                <h3 class="header-custom">Mężczyźni</h3>
+                <h4 class="content-custom">Środa: <br> 20:30</h4>
+                <h5 class="content-custom">Przeciwnik: UJ Kraków</h5>
+                <h5 class="content-custom">Hala UJ</h5>
+              </div>
+            </div>
+
+          </div>
+        </ng-template>
+    </a>
+  </div>
+  <!-- end of next-match popup -->
+
+  <!-- join-us popup -->
+  <div class="col-md-4 centered">
+    <a>
+      <i class="fa fa-users btn btn-custom btn-custom-black" title="dołącz do nas" (click)="openLg(contentJoin)"></i>
+      <ng-template #contentJoin let-ca="close('a')">
+        <div class="modal-header modalbox">
+          <h2 class="content-custom">Zapraszamy na trening!</h2>
+          <button type="button" class="close" aria-label="Close" (click)="ca">
+            <span aria-hidden="true">&times;</span>
+          </button>
+
+        </div>
+        <div class="modal-body modalbox">
+          <div class="row">
+            <div class="column">
+              <h3 class="header-custom">Kobiety</h3>
+              <h4 class="content-custom">Poniedziałki: 18:30
+                <br> Środy: 20:30</h4>
+            </div>
+            <div class="column">
+              <h3 class="header-custom">Mężczyźni</h3>
+              <h4 class="content-custom">Poniedziałki: 20:00
+                <br> Środy: 22:00</h4>
+            </div>
+          </div>
+
+          <h5 colspan="2" class="content-custom">Hala AZS AGH ul. Piastowska 26a, 30-070 Kraków</h5>
+
+        </div>
+      </ng-template>
+    </a>
+  </div>
+  <!-- end of join-us popup -->
+
+  <!-- contact popup -->
+  <div class="col-md-4 centered">
+    <a>
+      <i class="fa fa-envelope btn btn-custom btn-custom-red" title="kontakt" (click)="openLg(content)"></i>
+      <ng-template #content let-ca="close('a')">
+        <div class="modal-header modalbox">
+          <h2 class="content-custom">Napisz do nas!</h2>
+          <button type="button" class="close" aria-label="Close" (click)="ca">
+            <span aria-hidden="true" (click)="onCloseReset()">&times;</span>
+          </button>
+
+        </div>
+        <!-- <div class="modal-body modalbox">
+            <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                <input type="text" placeholder="Name" formControlName="name">
+                <input type="text" placeholder="Email" formControlName="email">
+                <textarea placeholder="Message" formControlName="message"></textarea>
+                <button type="submit" [disabled]="form.invalid">Submit</button></form> -->
+        <div class="modal-body modalbox">
+          <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <p>
+              Wypełnij pola poniżej, odpowiemy tak szybko jak to możliwe.
+            </p>
+
+            <div class="form-group">
+              <label for="name">
+                <h5>Imię:</h5>
+              </label>
+              <input type="text" id="name" class="form-control" formControlName="name" required maxlength="50">
+              <div *ngIf="form.get('name').invalid && form.get('name').touched" class="errorMessage">Za mało znaków - podaj imię!</div>
+            </div>
+            <div class="form-group">
+              <label for="email">
+                <h5> Email:</h5>
+              </label>
+              <input type="email" id="email" class="form-control" formControlName="email" required maxlength="50">
+              <div *ngIf="form.get('email').invalid && form.get('email').touched" class="errorMessage">Nieprawidłowy format - podaj adres email!</div>
+            </div>
+            <div class="form-group">
+              <label for="name">
+                <h5> Wiadomość:</h5>
+              </label>
+              <textarea placeholder="Tutaj wpisz wiadomość" class="form-control" id="message" formControlName="message" maxlength="6000"
+                rows="7"></textarea>
+              <div *ngIf="form.get('message').invalid && form.get('message').touched" class="errorMessage">Wiadomość musi mieć minimum 10 znaków!</div>
+            </div>
+
+            <button type="submit" id="submit" class="btn btn-lg btn-success btn-block" [disabled]="form.invalid">Wyślij →</button>
+            <div *ngIf="wasSubmitted" class="successMessage">Wiadomość została wysłana.</div>
+          </form>
+        </div>
+      </ng-template>
+    </a>
+  </div>
+  <!--end of contact popup -->
+  <!-- </div> -->
+</div>

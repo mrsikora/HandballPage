@@ -1,0 +1,35 @@
+.navbar-nav-custom {
+  float:none;
+  margin:0 auto;
+  display: block;
+  text-align: center;
+}
+
+.navbar-nav-custom > li {
+  display: inline-block;
+  float:none;
+}
+
+.navbar-custom {
+  padding: 0;
+}
+.info {
+  text-align: center;
+  padding: 0px;
+
+}
+
+@media screen and (max-width: 767px) {
+  .collapse {
+    display: inline-block;
+  }
+  .navbar {
+    padding: 0;
+  }
+  .nav-link {
+    font-size:80%;
+  }
+  .info {
+    font-size:80%;
+  }
+}

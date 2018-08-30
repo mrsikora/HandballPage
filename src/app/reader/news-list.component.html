@@ -1,0 +1,17 @@
+<hr>
+<h2 class="header-custom">Aktualności</h2>
+<hr>
+<app-loading-spinner *ngIf="showSpinner"></app-loading-spinner>
+<pagination-controls previousLabel="Poprzednia" nextLabel="Następna" (pageChange)="p = $event"></pagination-controls>
+<div *ngFor="let article of news$ | async | paginate: { itemsPerPage: 3, currentPage: p }" class="row">
+  <div class="card mb-4 article-custom">
+    <app-loading-spinner *ngIf="showSpinner"></app-loading-spinner>
+    <img class="image-custom rounded" src="{{ article.imgURL }}" alt="{{ article.title }}">
+    <div class="card-body">
+      <h3 class="card-title title-custom">{{ article.title }}</h3>
+      <p class="card-text lead description-custom">{{ article.description }}</p>
+      <a [routerLink]="article.id" class="btn btn-danger button-custom">Czytaj więcej &rarr;</a>
+    </div>
+  </div>
+</div>
+<pagination-controls previousLabel="Poprzednia" nextLabel="Następna" class="pagination-custom" (pageChange)="p = $event"></pagination-controls>

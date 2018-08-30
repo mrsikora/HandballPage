@@ -1,0 +1,16 @@
+<hr>
+<h2 class="header-custom">Terminarz</h2>
+<hr>
+<div *ngIf="calendarOptions">
+  <ng-fullcalendar [options]="calendarOptions">  </ng-fullcalendar>
+</div>
+
+<!-- lista wydarzen pod kalendarzem -->
+<!-- <ul>
+  <li *ngFor="let event of eventList">
+{{event.title}}
+  </li>
+</ul> -->
+<!--
+ #ucCalendar  (eventClick)="eventClick($event.detail)" (eventDrop)="updateEvent($event.detail)"
+    (eventResize)="updateEvent($event.detail)" (clickButton)="clickButton($event.detail)" -->

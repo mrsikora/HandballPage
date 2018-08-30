@@ -1,0 +1,40 @@
+<hr>
+<h2 class="header-custom">Skład zespołów na sezon 2017/2018</h2>
+<hr>
+<br>
+<app-loading-spinner *ngIf="showSpinner"></app-loading-spinner>
+<h3 class="team"> Kobiety </h3>
+<div class="row">
+  <div class="col-md-3 col-6" *ngFor="let player of players$ | async">
+    <div *ngIf="player.team === 'women' ">
+      <div class="card custom-card ">
+        <img class="card-img-top custom-img" src="{{player.imgURL}}" alt="Player's image">
+        <div class="card-body">
+          <h2 class="number">{{player.number}} </h2>
+          <div class="custom-body">
+            <h5 class="card-title">{{player.name}}</h5>
+            <p class="card-text">{{player.position}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h3 class="team"> Mężczyźni </h3>
+<div class="row">
+  <div class="col-md-3 col-6 " *ngFor="let player of players$ | async | slice:15">
+    <div *ngIf="player.team === 'men' ">
+      <div class=" card custom-card">
+        <img class="card-img-top custom-img" src="{{player.imgURL}}" alt="Player's image">
+        <div class="card-body">
+          <h2 class="number">{{player.number}} </h2>
+          <div class="custom-body">
+            <h5 class="card-title">{{player.name}}</h5>
+            <p class="card-text">{{player.position}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+  <!-- Page Content -->
+  <div *ngIf="article$ | async as article" class="container">
+      <!-- Post Content Column -->
+
+      <!-- Title -->
+      <h3 class="title-custom">{{ article.title }}</h3>
+
+      <!-- Preview Image -->
+      <img class="image-custom rounded" src="{{ article.imgURL }}" alt="">
+      <hr>
+
+      <!-- Post Content -->
+      <p class="content-custom lead">
+        {{ article.content }}
+      </p>
+      <hr>
+  </div>
+

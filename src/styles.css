@@ -1,0 +1,68 @@
+/* You can add global styles to this file, and also import other style files */
+.ng-progress {
+  /* position: absolute!important; */
+  position: absolute!important;
+  top: 0!important;
+  left: 0!important;
+  right: 0!important;
+}
+.ng-progress-bar {
+  position: absolute !important;
+}
+/*style to pagination*/
+.ngx-pagination .current{
+  background: rgb(63,173,53) !important;
+  }
+
+
+/*style to slider-main-page*/
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  cursor: pointer !important;
+}
+
+/*style to popup main page - modal-window centered - didn't work on mobile!*/
+
+.modal-dialog {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+/*style to set schedule height - set to auto - calendar visible wtihout scrollbar*/
+/* .fc-day-grid-container {
+  height: 300px !important;
+} */
+.header-custom {
+  text-align: center;
+  color: rgb(220, 33, 60);
+}
+
+@media screen and (max-width: 767px) {
+  /*style to modal-window centered on mobile*/
+  .modal-dialog {
+    max-height: calc(100% - 100px);
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 1.7rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.3rem;
+  }
+  h4 {
+    font-size: 1.1rem;
+  }
+  h5 {
+    font-size: 1rem;
+  }
+}
+/*delete border while click on sth*/
+*:focus {
+  outline: none;
+}

@@ -1,0 +1,21 @@
+/* to display on mobile */
+
+#map {
+  padding-bottom: 50%;
+}
+
+.padding-custom {
+  padding: 0 30px 30px;
+}
+
+@media screen and (max-width: 767px) {
+  .padding-custom {
+    padding: 10px;
+  }
+  h1 {
+    line-height: 50%;
+  }
+  p {
+    line-height: 50%;
+  }
+}

@@ -1,0 +1,47 @@
+.button-custom {
+  background-color: rgb(220, 33, 60);
+  border-color: rgb(220, 33, 60);
+}
+
+.title-custom {
+  text-align: center;
+}
+
+.article-custom {
+  padding: 40px 80px 30px;
+  margin-right: auto;
+  margin-left: auto;
+  width:1028px;
+}
+
+.image-custom {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.description-custom {
+  text-align: justify;
+}
+
+.btn-custom {
+  padding: 3rem;
+  background-color: transparent;
+  font-size: 6.25rem;
+  border-width: 0.1rem;
+}
+
+.btn-custom-green {
+  color: rgb(63, 173, 53);
+  border-color: rgb(63, 173, 53);
+}
+
+.btn-custom-green:hover {
+  background-color: rgb(63, 173, 53) !important;
+}
+@media screen and (max-width: 767px) {
+  .article-custom {
+    padding: 20px 0 0;
+  }
+}
